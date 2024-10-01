@@ -3,10 +3,93 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root.theme-dark {
+  --accent-color: #ff0070;
+  --hover: rgba(255 0 112 / 0.4);
+  --background-color: #000028;
+  --main-header-font-color: #db00ff;
+  --p-font-color: #f1b2ce;
+  --background-image: url(../images/cover-image-dark.png);
+}
 
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --accent-color: #ff0070;
+  --hover: rgba(255 0 112 / 0.4);
+  --background-color: #000028;
+  --main-header-font-color: #db00ff;
+  --p-font-color: #f1b2ce;
+  --background-image: url(../images/cover-image-dark.png);
+}
+
+.theme_dark .decorated-zone {
+  position: relative;
+}
+
+.theme_dark .decorated-zone::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  width: 25px;
+  height: 25px;
+}
+
+.theme_dark .decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: var(--padding-border);
+  left: 0px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  width: 25px;
+  height: 25px;
+}
+
+.theme_dark .decoration {
+  display: inline-block;
+  color: var(--accent-color);
+  position: absolute;
+  top: 0px;
+  right: 28px;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.theme_dark .decoration::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  left: 41px;
+  background-color: var(--accent-color);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.theme_dark .section__title {
+  color: var(--accent-color);
+}
+
+.theme_dark .header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+.theme_dark .header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+
+.theme_dark .footer_decorated-zone::before {
+  top: var(--padding-border);
+}
+
+.theme_dark .footer_decorated-zone::after {
+  bottom: 0px;
 }
