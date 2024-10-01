@@ -9,7 +9,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  /* background-color: var(--background-color); */
+  background-color: var(--main-color);
   padding:0 var(--padding-border);
   position: relative;
 }
@@ -19,6 +19,7 @@
   --accent-color: #ff8dcb;
   --hover: rgba(50 49 45 / 0.4);
   --background-color: #353430;
+  --main-color:#ffc2e6;
   --main-header-font-color: #ffc2e6;
   --p-font-color: #353430;
   --background-image: url(../images/cover-image-light.png);

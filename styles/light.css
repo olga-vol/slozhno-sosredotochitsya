@@ -8,6 +8,7 @@
   --accent-color: #ff8dcb;
   --hover: rgba(50 49 45 / 0.4);
   --background-color: #353430;
+  --main-color:#ffc2e6;
   --main-header-font-color: #ffc2e6;
   --p-font-color: #353430;
   --background-image: url(../images/cover-image-light.png);
@@ -23,6 +24,7 @@
     --accent-color: #ff8dcb;
     --hover: rgba(50 49 45 / 0.4);
     --background-color: #353430;
+    --main-color:#ffc2e6;
     --main-header-font-color: #ffc2e6;
     --p-font-color: #353430;
     --background-image: url(../images/cover-image-light.png);
