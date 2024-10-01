@@ -20,6 +20,9 @@
   --p-font-color: #f1b2ce;
   --background-image: url(../images/cover-image-dark.png);
 }
+.theme-dark .page {
+  background-image: var(--background-image);
+}
 
 .theme_dark .decorated-zone {
   position: relative;
@@ -28,7 +31,7 @@
 .theme_dark .decorated-zone::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: var(--padding-border);
   right: 0px;
   border-top: 1px solid var(--accent-color);
   border-right: 1px solid var(--accent-color);
@@ -51,7 +54,7 @@
   display: inline-block;
   color: var(--accent-color);
   position: absolute;
-  top: 0px;
+  top: var(--padding-border);
   right: 28px;
   font-family: "IBM Plex Mono";
   font-style: normal;
@@ -84,12 +87,4 @@
 
 .theme_dark .header__theme-menu-button_active {
   outline: 1px solid var(--accent-color);
-}
-
-.theme_dark .footer_decorated-zone::before {
-  top: var(--padding-border);
-}
-
-.theme_dark .footer_decorated-zone::after {
-  bottom: 0px;
 }
