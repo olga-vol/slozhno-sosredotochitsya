@@ -4,12 +4,22 @@
   переменные темной темы
 */
 :root {
-  --accent-color: #FF0070;
+  --accent-color: #ff0070;
   --hover: rgba(255 0 112 / 0.4);
   --background-color: #000028;
-  --main-color:#000028;
-  --main-header-font-color:#DB00FF;
-  --p-font-color: #F1B2CE;
+  --main-color: #000028;
+  --main-header-font-color: #db00ff;
+  --p-font-color: #f1b2ce;
   --background-image: url(../images/cover-image-dark.png);
   --padding-border: 10px;
+  --decoration-color: #ff0070;
+  --font: "IBM Plex Mono";
+  --section__title: #ff0070;
+  --menu-button: #ff0070;
+}
+
+@media (width >= 768px) {
+  .page {
+    --padding-border: 20px;
+  }
 }

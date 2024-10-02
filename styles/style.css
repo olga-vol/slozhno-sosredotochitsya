@@ -10,32 +10,19 @@
   background-size: cover;
   background-attachment: fixed;
   background-color: var(--main-color);
-  padding:0 var(--padding-border);
+  padding: 0 var(--padding-border);
   position: relative;
-}
-
-.theme_light {
-  /* Переменные светлой темы */
-  --accent-color: #ff8dcb;
-  --hover: rgba(50 49 45 / 0.4);
-  --background-color: #353430;
-  --main-color:#FFF1F7;
-  --main-header-font-color: #ffc2e6;
-  --p-font-color: #353430;
-  --background-image: url(../images/cover-image-light.png);
-  --hover: rgba(50 49 45 / 0.4);
 }
 
 .header {
   display: grid;
   height: 100vh;
-  min-height:668px;
+  min-height: 668px;
   grid-template-rows: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
   padding-block-end: var(--padding-border);
   padding-block-start: var(--padding-border);
-
 }
 
 .decorated-zone {
@@ -47,8 +34,8 @@
   position: absolute;
   top: var(--padding-border);
   right: 0px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--decoration-color);
+  border-right: 1px solid var(--decoration-color);
   width: 25px;
   height: 25px;
 }
@@ -58,8 +45,8 @@
   position: absolute;
   bottom: var(--padding-border);
   left: 0px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--decoration-color);
+  border-left: 1px solid var(--decoration-color);
   width: 25px;
   height: 25px;
 }
@@ -69,7 +56,7 @@
   position: absolute;
   top: var(--padding-border);
   right: 28px;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font), sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -104,10 +91,10 @@
 
 .header__theme-menu-button {
   background-color: transparent;
-  color: var(--accent-color);
+  color: var(--menu-button);
   border: none;
   appearance: none;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font), sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -115,30 +102,32 @@
   text-align: center;
   text-transform: lowercase;
   padding: 2px 13px 4px;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
   outline: 1px solid var(--hover);
 }
 
-.header__theme-menu-button:focus, .link_accent:focus {
-  appearance:none;
+.header__theme-menu-button:focus,
+.link_accent:focus {
+  appearance: none;
   outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--menu-button);
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--menu-button);
   pointer-events: none;
 }
 
 .header__title {
   margin: 0;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font), sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -152,7 +141,7 @@
   display: block;
   inline-size: 100%;
   background-color: var(--accent-color);
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font), sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -161,8 +150,8 @@
 }
 
 .section__title {
-  color: var(--accent-color);
-  font-family: "IBM Plex Mono", sans-serif;
+  color: var(--section__title);
+  font-family: var(--font), sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -171,7 +160,7 @@
 }
 
 .section__list_p {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font), sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -238,11 +227,6 @@
 }
 
 @media (width >= 768px) {
-  .page {
-    --padding-border: 20px;
-    padding:0 var(--padding-border);
-  }
-
   .header {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr min-content 1fr;
@@ -292,6 +276,7 @@
   .section-grid-auto .title-decor {
     grid-column: span 3;
   }
+
   .section-grid__article {
     margin-bottom: 20px;
   }
@@ -329,9 +314,11 @@
   .street {
     grid-area: street;
   }
+
   .main__list_img:last-of-type {
     margin-block-end: 60px;
   }
+
   .footer {
     padding-inline-start: 20px;
   }
